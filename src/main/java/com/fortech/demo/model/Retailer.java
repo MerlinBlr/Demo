@@ -15,6 +15,8 @@ import java.util.Set;
 @Table(name = "retailer")
 public class Retailer implements Serializable {
 
+    //todo do not forget to remove
+
     @Id
     @GeneratedValue(generator = "seq_retailer")
     @SequenceGenerator(name = "seq_retailer", sequenceName = "seq_retailer", allocationSize = 1)
