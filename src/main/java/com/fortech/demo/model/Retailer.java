@@ -15,7 +15,7 @@ import java.util.Set;
 @Table(name = "retailer")
 public class Retailer implements Serializable {
 
-    //todo do not forget to remove
+    //todo do not forget to remove fddfsdfs
 
     @Id
     @GeneratedValue(generator = "seq_retailer")
