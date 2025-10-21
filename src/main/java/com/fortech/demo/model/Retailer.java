@@ -25,7 +25,7 @@ public class Retailer implements Serializable {
 
     @Column
     private String description;
-
+//dddddddddddddddddd
     @JsonIgnore
     @ManyToMany
     @JoinTable(
