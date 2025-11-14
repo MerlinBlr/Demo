@@ -17,20 +17,33 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @PostMapping(value = "/random")
+    @PostMapping("/random")
     public ResponseEntity<List<ProductResponse>> createRandomProducts() {
-        return ResponseEntity.ok(productService.createProductsFromAPI());
+        try {
+            List<ProductResponse> products = productService.createProductsFromAPI();
+            return ResponseEntity.ok(products);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).build();
+        }
     }
 
-    @PutMapping(value = "/stock")
-    public ResponseEntity<Void> changeStockLevel(@RequestParam RetailerName retailerName) {
-        productService.increaseStockLevel(retailerName);
-        return ResponseEntity.noContent().build();
+    @PutMapping("/stock")
+    public ResponseEntity<Void> changeStockLevel(@RequestParam  RetailerName retailerName) {
+        try {
+            productService.increaseStockLevel(retailerName);
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(500).build();
+        }
     }
 
-    @GetMapping(value = "/search")
-    public ResponseEntity<List<ProductResponse>> searchProducts(@RequestParam String text) {
-        return ResponseEntity.ok(productService.searchProducts(text));
+    @GetMapping("/search")
+    public ResponseEntity<List<ProductResponse>> searchProducts(@RequestParam  String text) {
+        try {
+            List<ProductResponse> products = productService.searchProducts(text);
+            return ResponseEntity.ok(products);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).build();
+        }
     }
-
 }
