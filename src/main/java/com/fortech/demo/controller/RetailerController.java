@@ -21,4 +21,10 @@ public class RetailerController {
     public ResponseEntity<RetailerResponse> getRetailer(@PathVariable Long id) {
         return ResponseEntity.ok(retailerService.getRetailerById(id));
     }
+
+    @GetMapping("/dummy")
+    public ResponseEntity<String> getDummyEndpoint() {
+        return ResponseEntity.ok("This is a dummy retailer endpoint for testing purposes.");
+    }
+
 }
