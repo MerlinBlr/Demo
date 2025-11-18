@@ -46,4 +46,9 @@ public class ProductController {
             return ResponseEntity.status(500).build();
         }
     }
+
+    @GetMapping("/dummy")
+    public ResponseEntity<String> getDummyEndpoint() {
+        return ResponseEntity.ok("This is a dummy endpoint for testing purposes.");
+    }
 }
