@@ -16,7 +16,6 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import static com.fortech.demo.util.Constants.*;
 import static org.jeasy.random.FieldPredicates.*;
-
 @Service
 @RequiredArgsConstructor
 public class ProductService {
@@ -72,5 +71,13 @@ public class ProductService {
     }
     private int getRandomNumber() {
         return ThreadLocalRandom.current().nextInt(RANDOM_BOUND);
+    }
+    // Dummy method to simulate a simple operation
+    public String getDummyMessage() {
+        return "This is a dummy message!";
+    }
+    // Dummy method to simulate a calculation
+    public int calculateDummyValue(int input) {
+        return input * 42; // Arbitrary calculation for demonstration
     }
 }
