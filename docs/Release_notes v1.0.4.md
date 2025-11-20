@@ -9,12 +9,12 @@ These release notes summarize the work completed as part of the latest developme
 
 ## 🚀 Key Updates
 
-- **JUnit 5 Integration**  
+- * JUnit 5 Integration *  
    - The `spring-boot-starter-test` now provides JUnit 5 by default.
    - The JUnit 5 "vintage" engine is included automatically, enabling continued support for existing JUnit 4-based test classes.
    - You can now run both JUnit 4 and JUnit 5 test classes within the same module, facilitating incremental migrations to JUnit 5.
 
-- **Testcontainers for Integration Testing**  
+- * Testcontainers for Integration Testing *  
    - Integration tests now utilize [Testcontainers](https://www.testcontainers.org) instead of plain Docker, leading to improved test isolation and environment portability.
 
 ---
